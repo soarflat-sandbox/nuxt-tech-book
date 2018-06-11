@@ -18,7 +18,7 @@ module.exports = {
 
   modules: ['@nuxtjs/axios', '@nuxtjs/dotenv'],
 
-  plugins: ['~/plugins/axios'],
+  plugins: ['~/plugins/axios', '~/plugins/logger'],
 
   router: {
     middleware: ['redirector'],
