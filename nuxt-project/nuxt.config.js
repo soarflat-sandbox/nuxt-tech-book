@@ -21,11 +21,7 @@ module.exports = {
   plugins: ['~/plugins/axios', '~/plugins/logger'],
 
   router: {
-    middleware: ['redirector'],
-  },
-
-  router: {
-    middleware: ['redirector'],
+    middleware: ['redirector', 'auth'],
   },
 
   /*
