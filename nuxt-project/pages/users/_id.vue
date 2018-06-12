@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h1>{{user.name}}</h1>
+      <h1>{{ user.name }}</h1>
       <img :src="user.avatar_url">
     </div>
   </div>
