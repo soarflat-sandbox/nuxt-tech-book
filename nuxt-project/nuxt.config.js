@@ -18,9 +18,19 @@ module.exports = {
   // `yarn add @nuxtjs/axios -S`した axios が読み込まれ、
   // Vue コンポーネントや Vuex ストアからそのまま呼び出せるようになる
   modules: ['@nuxtjs/axios', '@nuxtjs/dotenv'],
+  // '~/plugins/axios'は
   // axios をカスタマイズするための Interceptor（割り込み処理）
   // https://axios.nuxtjs.org/extend.html
-  plugins: ['~/plugins/axios'],
+  //
+  // '~/plugins/logger'は
+  // vue-routerのbeforEachフックを利用して
+  // ページ遷移が行われるたびに、そのルーティングパスを
+  // `console.log`で表示するプラグイン
+  plugins: ['~/plugins/axios', '~/plugins/logger'],
+  // `middleware/redirector.js`をグローバルで利用できるようになる
+  router: {
+    middleware: ['redirector'],
+  },
   /*
   ** Build configuration
   */
